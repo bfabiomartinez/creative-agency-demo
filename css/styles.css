@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: #333;
+  --secondary-color: #363636;
+  --tertiary-color: #fff;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 0 0.3rem;
+}
+
+.bg-light {
+  background-color: var(--tertiary-color);
+  color: #1b1b1b;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-sm {
+  max-width: 768px;
+}
+
+.container-lg {
+  max-width: 1400px;
+}
+
+.section-heading {
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border: 1px solid #fff;
+  border-radius: 5rem;
+  background: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    background: #fff;
+    color: #1b1b1b;
+  }
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+header {
+  margin: 1.5rem auto;
+  .logo {
+    width: 60px;
+  }
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .main-menu {
+    display: flex;
+    gap: 1rem;
+  }
+  a {
+    padding: 0.5rem 1rem;
+    border-radius: 3rem;
+
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+  .current {
+    background-color: var(--primary-color);
+    font-weight: bold;
+  }
+}
+
+.hero {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h2 {
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: normal;
+  }
+}
+
+.gallery-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.gallery-item {
+  width: calc(33.333% - 2rem);
+  border-radius: 1rem;
+  img {
+    border-radius: 1rem;
+    filter: grayscale(100%);
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+/* About */
+
+.services {
+  padding: 3rem 0;
+}
+
+.services-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.service-item {
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+.team {
+  padding: 3rem 0;
+  img {
+    border-radius: 1rem;
+    filter: grayscale(100%);
+  }
+}
+
+.team-flex {
+  display: flex;
+  gap: 1.4rem;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.team-item {
+  width: calc(33.333% - 1.4rem);
+}
+
+/* Contact */
+.contact {
+  padding: 3rem 0;
+  p {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  input,
+  textarea {
+    border: none;
+    border-bottom: 1px #fff solid;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    padding-bottom: 1rem;
+    background-color: #1b1b1b;
+    color: inherit;
+    &:focus {
+      outline: none;
+    }
+  }
+  .btn {
+    width: 100%;
+  }
+}
+
+.form-group {
+  margin: 2rem 0;
+}
+
+footer {
+  border-top: 1px solid #fff;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+  .footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  img {
+    width: 3rem;
+  }
+  h4 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+  a {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    .header-flex {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  .hero {
+    height: 25vh;
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
+  .gallery-item {
+    width: calc(50% - 2rem);
+  }
+  .services {
+    .services-flex {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  .team {
+    .team-flex {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+  .team-item {
+    width: 80%;
+    text-align: center;
+  }
+  footer {
+    .footer-flex {
+      flex-direction: column;
+      gap: 1.5rem;
+      text-align: center;
+    }
+  }
+}
